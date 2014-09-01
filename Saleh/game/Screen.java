@@ -27,6 +27,16 @@ public class Screen {
     	return vc.getFullScreenWindow();
     }
     
+    public int screenWidth(){
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		return (int)screenSize.getWidth();
+	}
+	
+	public int screenHeight(){
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		return (int)screenSize.getHeight();
+	}
+    
     public void restoreScreen(){
     	Window w = vc.getFullScreenWindow();
     	if (w !=null){
