@@ -24,6 +24,10 @@ public class runGame extends JFrame{
 		}
 	}
 	public void paint(Graphics g){
+		if(g instanceof Graphics2D){
+			Graphics2D g2 = (Graphics2D)g; //to add smooth text
+			g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,RenderingHints.VALUE_TEXT_ANTIALIAS_ON); //add antialiasing to text
+		}
 		g.drawString("This is a test",200,200);
 	}
 }
